@@ -108,12 +108,9 @@ if __name__ == '__main__':
         parsing_ip_header(data[0][ether_end:ip_end])
         # print(type(protocol))
         # print(protocol)
-        print("[debug]ip_end:", ip_end)
         if protocol == 6:
             parsing_tcp_header(data[0][ip_end:ip_end+20])
-            input("tcp printed")
         elif protocol == 17:
             parsing_udp_header(data[0][ip_end:ip_end+8])
-            input("udp printed")
 
 
